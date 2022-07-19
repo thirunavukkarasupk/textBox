@@ -1,9 +1,11 @@
 import { React } from 'react';
 import './App.scss';
+import textBox from './components/textBox';
 
-const App = () =>
+const App = ({ state, actions }) =>
 	<div className="App" role="App">
-		Ready to start.
+		<div> {textBox({ state, actions })} </div>
+		<div>{state.text}</div>
 	</div>;
 
 export default App;
